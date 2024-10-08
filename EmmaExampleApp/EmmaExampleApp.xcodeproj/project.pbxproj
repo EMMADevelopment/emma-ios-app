@@ -11,6 +11,7 @@
 		B42E61182CB53738002D389F /* ButtonModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B42E61172CB53738002D389F /* ButtonModel.swift */; };
 		B42E611A2CB537D8002D389F /* ButtonsGrid.swift in Sources */ = {isa = PBXBuildFile; fileRef = B42E61192CB537D8002D389F /* ButtonsGrid.swift */; };
 		B42E611E2CB53AEB002D389F /* Extension+Array.swift in Sources */ = {isa = PBXBuildFile; fileRef = B42E611D2CB53AEB002D389F /* Extension+Array.swift */; };
+		B42E61212CB54035002D389F /* MainItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = B42E61202CB54035002D389F /* MainItem.swift */; };
 		B47C61F72CAFFD760005BD9C /* EmmaExampleApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = B47C61F62CAFFD760005BD9C /* EmmaExampleApp.swift */; };
 		B47C61FB2CAFFD770005BD9C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B47C61FA2CAFFD770005BD9C /* Assets.xcassets */; };
 		B47C61FE2CAFFD770005BD9C /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B47C61FD2CAFFD770005BD9C /* Preview Assets.xcassets */; };
@@ -25,6 +26,7 @@
 		B42E61172CB53738002D389F /* ButtonModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonModel.swift; sourceTree = "<group>"; };
 		B42E61192CB537D8002D389F /* ButtonsGrid.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonsGrid.swift; sourceTree = "<group>"; };
 		B42E611D2CB53AEB002D389F /* Extension+Array.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Extension+Array.swift"; sourceTree = "<group>"; };
+		B42E61202CB54035002D389F /* MainItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainItem.swift; sourceTree = "<group>"; };
 		B47C61F32CAFFD760005BD9C /* EmmaExampleApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = EmmaExampleApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B47C61F62CAFFD760005BD9C /* EmmaExampleApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmmaExampleApp.swift; sourceTree = "<group>"; };
 		B47C61FA2CAFFD770005BD9C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -139,6 +141,7 @@
 				B4DC0D0B2CB40E4900471618 /* LearnMoreItem.swift */,
 				B42E61142CB534F5002D389F /* EmmaButton.swift */,
 				B42E61192CB537D8002D389F /* ButtonsGrid.swift */,
+				B42E61202CB54035002D389F /* MainItem.swift */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -239,6 +242,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				B42E61182CB53738002D389F /* ButtonModel.swift in Sources */,
+				B42E61212CB54035002D389F /* MainItem.swift in Sources */,
 				B42E611E2CB53AEB002D389F /* Extension+Array.swift in Sources */,
 				B42E611A2CB537D8002D389F /* ButtonsGrid.swift in Sources */,
 				B47C62092CAFFE7E0005BD9C /* HomeView.swift in Sources */,
