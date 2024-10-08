@@ -12,9 +12,19 @@ struct HomeView: View {
         ZStack(alignment: .top) {
             Color.white.ignoresSafeArea()
             
-            // HEADER
-            header
+            NavigationView {
+                ScrollView(.vertical) {
+                    LazyVStack {
+                        // HEADER
+                        header
+                        
+                        // FOOTER
+                        footer
+                    }
+                }
+                .scrollIndicators(.hidden)
                 .ignoresSafeArea()
+            }
         }
     }
 }
@@ -48,7 +58,20 @@ private var header: some View {
         }
         .frame(maxWidth: .infinity, maxHeight: .infinity)
     }
-    .frame(height: 275)
+}
+
+private var footer: some View {
+    VStack(spacing: 0) {
+        ForEach(learnMoreData) {
+            LearnMoreItem(
+                title: $0.title,
+                description: $0.description,
+                link: $0.link
+            )
+        }
+    }
+    .padding(.horizontal, 30)
+    .padding(.vertical, 6)
 }
 
 #Preview {
