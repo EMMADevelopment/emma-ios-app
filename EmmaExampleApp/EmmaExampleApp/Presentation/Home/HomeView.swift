@@ -21,9 +21,11 @@ struct HomeView: View {
                         // FOOTER
                         footer
                     }
+                    .background(Color.white)
                 }
                 .scrollIndicators(.hidden)
                 .ignoresSafeArea()
+                .background(Color.emmaDark)
             }
         }
     }
