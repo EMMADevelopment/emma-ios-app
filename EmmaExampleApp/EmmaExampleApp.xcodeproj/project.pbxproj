@@ -12,6 +12,7 @@
 		B42E611A2CB537D8002D389F /* ButtonsGrid.swift in Sources */ = {isa = PBXBuildFile; fileRef = B42E61192CB537D8002D389F /* ButtonsGrid.swift */; };
 		B42E611E2CB53AEB002D389F /* Extension+Array.swift in Sources */ = {isa = PBXBuildFile; fileRef = B42E611D2CB53AEB002D389F /* Extension+Array.swift */; };
 		B42E61212CB54035002D389F /* MainItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = B42E61202CB54035002D389F /* MainItem.swift */; };
+		B42E61232CB5450C002D389F /* MainItemData.swift in Sources */ = {isa = PBXBuildFile; fileRef = B42E61222CB5450C002D389F /* MainItemData.swift */; };
 		B47C61F72CAFFD760005BD9C /* EmmaExampleApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = B47C61F62CAFFD760005BD9C /* EmmaExampleApp.swift */; };
 		B47C61FB2CAFFD770005BD9C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B47C61FA2CAFFD770005BD9C /* Assets.xcassets */; };
 		B47C61FE2CAFFD770005BD9C /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B47C61FD2CAFFD770005BD9C /* Preview Assets.xcassets */; };
@@ -27,6 +28,7 @@
 		B42E61192CB537D8002D389F /* ButtonsGrid.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonsGrid.swift; sourceTree = "<group>"; };
 		B42E611D2CB53AEB002D389F /* Extension+Array.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Extension+Array.swift"; sourceTree = "<group>"; };
 		B42E61202CB54035002D389F /* MainItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainItem.swift; sourceTree = "<group>"; };
+		B42E61222CB5450C002D389F /* MainItemData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainItemData.swift; sourceTree = "<group>"; };
 		B47C61F32CAFFD760005BD9C /* EmmaExampleApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = EmmaExampleApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B47C61F62CAFFD760005BD9C /* EmmaExampleApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmmaExampleApp.swift; sourceTree = "<group>"; };
 		B47C61FA2CAFFD770005BD9C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -159,6 +161,7 @@
 			isa = PBXGroup;
 			children = (
 				B4DC0D092CB40C7A00471618 /* LearnMoreData.swift */,
+				B42E61222CB5450C002D389F /* MainItemData.swift */,
 			);
 			path = Data;
 			sourceTree = "<group>";
@@ -249,6 +252,7 @@
 				B4DC0D0F2CB47D4500471618 /* WebView.swift in Sources */,
 				B4DC0D0A2CB40C7A00471618 /* LearnMoreData.swift in Sources */,
 				B4DC0D0C2CB40E4900471618 /* LearnMoreItem.swift in Sources */,
+				B42E61232CB5450C002D389F /* MainItemData.swift in Sources */,
 				B47C61F72CAFFD760005BD9C /* EmmaExampleApp.swift in Sources */,
 				B42E61152CB534F5002D389F /* EmmaButton.swift in Sources */,
 			);

@@ -11,7 +11,7 @@ import SwiftUI
 struct EmmaExampleApp: App {
     var body: some Scene {
         WindowGroup {
-            HomeView()
+            HomeView(sessionStarted: true)
         }
     }
 }
