@@ -33,6 +33,7 @@
 		B42E61222CB5450C002D389F /* MainItemData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainItemData.swift; sourceTree = "<group>"; };
 		B46729412CB696D6003A641F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		B46729432CB6994A003A641F /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
+		B46729452CB6A488003A641F /* EmmaExampleApp.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = EmmaExampleApp.entitlements; sourceTree = "<group>"; };
 		B47C61F32CAFFD760005BD9C /* EmmaExampleApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = EmmaExampleApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B47C61F62CAFFD760005BD9C /* EmmaExampleApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmmaExampleApp.swift; sourceTree = "<group>"; };
 		B47C61FA2CAFFD770005BD9C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -109,6 +110,7 @@
 		B47C61F52CAFFD760005BD9C /* EmmaExampleApp */ = {
 			isa = PBXGroup;
 			children = (
+				B46729452CB6A488003A641F /* EmmaExampleApp.entitlements */,
 				B46729412CB696D6003A641F /* Info.plist */,
 				B47C62042CAFFE350005BD9C /* App */,
 				B47C62052CAFFE3E0005BD9C /* Resources */,
@@ -407,9 +409,11 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = EmmaExampleApp/EmmaExampleApp.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"EmmaExampleApp/Preview Content\"";
+				DEVELOPMENT_TEAM = "";
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = EmmaExampleApp/Info.plist;
@@ -440,9 +444,11 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = EmmaExampleApp/EmmaExampleApp.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"EmmaExampleApp/Preview Content\"";
+				DEVELOPMENT_TEAM = "";
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = EmmaExampleApp/Info.plist;

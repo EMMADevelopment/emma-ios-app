@@ -23,6 +23,15 @@ class AppDelegate: NSObject, UIApplicationDelegate {
         EMMA.startSession(with: configuration)
         return true
     }
+    
+    func application(_ application: UIApplication, continue userActivity: NSUserActivity, restorationHandler: @escaping ([any UIUserActivityRestoring]?) -> Void) -> Bool {
+        if userActivity.activityType == NSUserActivityTypeBrowsingWeb {
+            if let url = userActivity.webpageURL {
+                EMMA.handleLink(url: url)
+            }
+        }
+        return true
+    }
 }
 
 @main
