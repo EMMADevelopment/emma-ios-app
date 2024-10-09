@@ -14,6 +14,7 @@
 		B42E61212CB54035002D389F /* MainItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = B42E61202CB54035002D389F /* MainItem.swift */; };
 		B42E61232CB5450C002D389F /* MainItemData.swift in Sources */ = {isa = PBXBuildFile; fileRef = B42E61222CB5450C002D389F /* MainItemData.swift */; };
 		B46729402CB68760003A641F /* EMMA_iOS in Frameworks */ = {isa = PBXBuildFile; productRef = B467293F2CB68760003A641F /* EMMA_iOS */; };
+		B46729442CB6994A003A641F /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B46729432CB6994A003A641F /* StoreKit.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
 		B47C61F72CAFFD760005BD9C /* EmmaExampleApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = B47C61F62CAFFD760005BD9C /* EmmaExampleApp.swift */; };
 		B47C61FB2CAFFD770005BD9C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B47C61FA2CAFFD770005BD9C /* Assets.xcassets */; };
 		B47C61FE2CAFFD770005BD9C /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B47C61FD2CAFFD770005BD9C /* Preview Assets.xcassets */; };
@@ -30,6 +31,8 @@
 		B42E611D2CB53AEB002D389F /* Extension+Array.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Extension+Array.swift"; sourceTree = "<group>"; };
 		B42E61202CB54035002D389F /* MainItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainItem.swift; sourceTree = "<group>"; };
 		B42E61222CB5450C002D389F /* MainItemData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainItemData.swift; sourceTree = "<group>"; };
+		B46729412CB696D6003A641F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		B46729432CB6994A003A641F /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
 		B47C61F32CAFFD760005BD9C /* EmmaExampleApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = EmmaExampleApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B47C61F62CAFFD760005BD9C /* EmmaExampleApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmmaExampleApp.swift; sourceTree = "<group>"; };
 		B47C61FA2CAFFD770005BD9C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -46,6 +49,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				B46729402CB68760003A641F /* EMMA_iOS in Frameworks */,
+				B46729442CB6994A003A641F /* StoreKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -77,11 +81,20 @@
 			path = Extensions;
 			sourceTree = "<group>";
 		};
+		B46729422CB6994A003A641F /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				B46729432CB6994A003A641F /* StoreKit.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		B47C61EA2CAFFD760005BD9C = {
 			isa = PBXGroup;
 			children = (
 				B47C61F52CAFFD760005BD9C /* EmmaExampleApp */,
 				B47C61F42CAFFD760005BD9C /* Products */,
+				B46729422CB6994A003A641F /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -96,6 +109,7 @@
 		B47C61F52CAFFD760005BD9C /* EmmaExampleApp */ = {
 			isa = PBXGroup;
 			children = (
+				B46729412CB696D6003A641F /* Info.plist */,
 				B47C62042CAFFE350005BD9C /* App */,
 				B47C62052CAFFE3E0005BD9C /* Resources */,
 				B4DC0D082CB40C5300471618 /* Data */,
@@ -398,6 +412,7 @@
 				DEVELOPMENT_ASSET_PATHS = "\"EmmaExampleApp/Preview Content\"";
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = EmmaExampleApp/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -430,6 +445,7 @@
 				DEVELOPMENT_ASSET_PATHS = "\"EmmaExampleApp/Preview Content\"";
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = EmmaExampleApp/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
