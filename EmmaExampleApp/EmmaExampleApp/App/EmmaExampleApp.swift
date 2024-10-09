@@ -6,9 +6,29 @@
 //
 
 import SwiftUI
+import EMMA_iOS
+
+class AppDelegate: NSObject, UIApplicationDelegate {
+    var window: UIWindow?
+    
+    func application(
+        _ application: UIApplication,
+        didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey : Any]? = nil
+    ) -> Bool {
+        // EMMA uses window to display some InApp Messages
+        self.window = UIWindow(frame: UIScreen.main.bounds)
+        
+        let configuration = EMMAConfiguration()
+        configuration.sessionKey = ""
+        EMMA.startSession(with: configuration)
+        return true
+    }
+}
 
 @main
 struct EmmaExampleApp: App {
+    @UIApplicationDelegateAdaptor(AppDelegate.self) var appDelegate
+    
     var body: some Scene {
         WindowGroup {
             HomeView(sessionStarted: true)

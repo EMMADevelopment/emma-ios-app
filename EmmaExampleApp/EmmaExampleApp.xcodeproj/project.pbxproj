@@ -13,6 +13,7 @@
 		B42E611E2CB53AEB002D389F /* Extension+Array.swift in Sources */ = {isa = PBXBuildFile; fileRef = B42E611D2CB53AEB002D389F /* Extension+Array.swift */; };
 		B42E61212CB54035002D389F /* MainItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = B42E61202CB54035002D389F /* MainItem.swift */; };
 		B42E61232CB5450C002D389F /* MainItemData.swift in Sources */ = {isa = PBXBuildFile; fileRef = B42E61222CB5450C002D389F /* MainItemData.swift */; };
+		B46729402CB68760003A641F /* EMMA_iOS in Frameworks */ = {isa = PBXBuildFile; productRef = B467293F2CB68760003A641F /* EMMA_iOS */; };
 		B47C61F72CAFFD760005BD9C /* EmmaExampleApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = B47C61F62CAFFD760005BD9C /* EmmaExampleApp.swift */; };
 		B47C61FB2CAFFD770005BD9C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B47C61FA2CAFFD770005BD9C /* Assets.xcassets */; };
 		B47C61FE2CAFFD770005BD9C /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B47C61FD2CAFFD770005BD9C /* Preview Assets.xcassets */; };
@@ -44,6 +45,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B46729402CB68760003A641F /* EMMA_iOS in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -190,6 +192,9 @@
 			dependencies = (
 			);
 			name = EmmaExampleApp;
+			packageProductDependencies = (
+				B467293F2CB68760003A641F /* EMMA_iOS */,
+			);
 			productName = EmmaExampleApp;
 			productReference = B47C61F32CAFFD760005BD9C /* EmmaExampleApp.app */;
 			productType = "com.apple.product-type.application";
@@ -218,6 +223,9 @@
 				Base,
 			);
 			mainGroup = B47C61EA2CAFFD760005BD9C;
+			packageReferences = (
+				B467293E2CB68760003A641F /* XCRemoteSwiftPackageReference "eMMa-iOS-SDK" */,
+			);
 			productRefGroup = B47C61F42CAFFD760005BD9C /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -466,6 +474,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		B467293E2CB68760003A641F /* XCRemoteSwiftPackageReference "eMMa-iOS-SDK" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/EMMADevelopment/eMMa-iOS-SDK";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 4.12.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		B467293F2CB68760003A641F /* EMMA_iOS */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = B467293E2CB68760003A641F /* XCRemoteSwiftPackageReference "eMMa-iOS-SDK" */;
+			productName = EMMA_iOS;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = B47C61EB2CAFFD760005BD9C /* Project object */;
 }
