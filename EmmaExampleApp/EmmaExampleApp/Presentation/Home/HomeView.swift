@@ -62,6 +62,8 @@ private func manageButtonClick(buttonTitle: String, homeViewModel: HomeViewModel
             homeViewModel.trackEvent(token: "a6638efafbe61f63ee3fe31d7db476d4", attributes: attributes)
         case "Add user tag 'tag'":
             print("ADD USER TAG 'TAG'")
+            let tags: [String:String] = ["TAG": "TEST SALVA"]
+            homeViewModel.addUserTag(tags: tags)
         case "Show adball":
             print("SHOW ADBALL")
         case "Show startview":
@@ -84,6 +86,7 @@ private func manageButtonClick(buttonTitle: String, homeViewModel: HomeViewModel
             homeViewModel.cancelTransaction(orderId: "<ORDER_ID_SALVA_TEST>")
         case "Request idfa tracking":
             print("REQUEST IDFA TRACKING")
+            homeViewModel.trackWithIdfa()
         default:
             print("Button not found!")
     }

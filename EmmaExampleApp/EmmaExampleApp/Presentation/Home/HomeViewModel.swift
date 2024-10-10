@@ -12,7 +12,41 @@ final class HomeViewModel: ObservableObject {
     // MARK: - Properties -
     @Published var deeplink: String = ""
     
+    // MARK: - INIT -
+    init() {
+        getUserId()
+        getDeviceId()
+        getUserInfo()
+    }
+    
     // MARK: - Functions -
+    // Recuperar el identificador interno de EMMA
+    private func getUserId() {
+        EMMA.getUserId { userId in
+            guard let uid = userId else {
+                print("Error getting user id")
+                return
+            }
+            print("Our EMMA USER ID is \(uid)")
+        }
+    }
+    
+    // Obtener el identificador del dispositivo (tipo UUID V4)
+    private func getDeviceId() {
+        print("Our EMMA DEVICE ID is \(EMMA.deviceId())")
+    }
+    
+    // Recuperar el perfil del usuario desde la aplicación
+    private func getUserInfo() {
+        EMMA.getUserInfo { userProfile in
+            guard let profile = userProfile else {
+                print("Error getting user profile")
+                return
+            }
+            print("Retrieved user profile: \(profile)")
+        }
+    }
+    
     // Enviar información sobre los registros en la aplicación
     func register(userId: String, mail: String) {
         EMMA.registerUser(userId: userId, forMail: mail, andExtras: nil)
@@ -51,5 +85,17 @@ final class HomeViewModel: ObservableObject {
         }
         
         EMMA.trackEvent(request: eventRequest)
+    }
+    
+    // Enriquecer el perfil del usuario con información almacenada mediante Clave / Valor a la que le llamamos tags de usuario
+    func addUserTag(tags: [String:String]) {
+        EMMA.trackExtraUserInfo(info: tags)
+    }
+    
+    // Permiso para rastrear o acceder al Identificador de anunciantes (IDFA)
+    func trackWithIdfa() {
+        if #available(iOS 14.0, *) {
+            EMMA.requestTrackingWithIdfa()
+        }
     }
 }
