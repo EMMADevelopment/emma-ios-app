@@ -55,8 +55,11 @@ private func manageButtonClick(buttonTitle: String, homeViewModel: HomeViewModel
             homeViewModel.register(userId: "654321", mail: "testSalva@emma.io")
         case "Log in user":
             print("LOG IN USER")
+            homeViewModel.login(userId: "654321", mail: "testSalva@emma.io")
         case "Track event":
             print("TRACK EVENT")
+            let attributes: [String:String] = ["AttributeTest":"EventTestSalva"]
+            homeViewModel.trackEvent(token: "a6638efafbe61f63ee3fe31d7db476d4", attributes: attributes)
         case "Add user tag 'tag'":
             print("ADD USER TAG 'TAG'")
         case "Show adball":
@@ -69,12 +72,16 @@ private func manageButtonClick(buttonTitle: String, homeViewModel: HomeViewModel
             print("SHOW NATIVE AD")
         case "Start order":
             print("START ORDER")
+            homeViewModel.startOrder(orderId: "<ORDER_ID_SALVA_TEST>", customerId: "<CUSTOMER_ID_SALVA_TEST", totalPrice: 13.03)
         case "Add product":
             print("ADD PRODUCT")
+            homeViewModel.addProduct(productId: "<PRODUCT_ID_SALVA_TEST>", name: "<PRODUCT_NAME_SALVA_TEST>", qty: 1.0, price: 13.03)
         case "Track order":
             print("TRACK ORDER")
+            homeViewModel.trackOrder()
         case "Cancel order":
             print("CANCEL ORDER")
+            homeViewModel.cancelTransaction(orderId: "<ORDER_ID_SALVA_TEST>")
         case "Request idfa tracking":
             print("REQUEST IDFA TRACKING")
         default:
