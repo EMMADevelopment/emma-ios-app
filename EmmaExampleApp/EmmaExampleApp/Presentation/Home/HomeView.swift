@@ -8,9 +8,12 @@
 import SwiftUI
 
 struct HomeView: View {
-    
+    // MARK: - Properties -
+    @StateObject private var homeViewModel: HomeViewModel = HomeViewModel()
     let sessionStarted: Bool
     
+    
+    // MARK: - Main -
     var body: some View {
         ZStack(alignment: .top) {
             Color.white.ignoresSafeArea()
@@ -28,7 +31,7 @@ struct HomeView: View {
                         sessionSection(sessionStarted: sessionStarted)
                         
                         // THE OTHER SECTIONS
-                        otherSections
+                        otherSections(homeViewModel: homeViewModel)
                         
                         // FOOTER
                         footer
@@ -43,12 +46,13 @@ struct HomeView: View {
     }
 }
 
-private func manageButtonClick(buttonTitle: String) {
+private func manageButtonClick(buttonTitle: String, homeViewModel: HomeViewModel) {
     switch buttonTitle {
         case "Start session":
             print("START SESSION")
         case "Register user":
             print("REGISTER USER")
+            homeViewModel.register(userId: "654321", mail: "testSalva@emma.io")
         case "Log in user":
             print("LOG IN USER")
         case "Track event":
@@ -144,7 +148,7 @@ private func sessionSection(sessionStarted: Bool) -> some View {
     }
 }
 
-private var otherSections: some View {
+private func otherSections(homeViewModel: HomeViewModel) -> some View {
     ForEach(mainData) {
         MainItem(
             title: $0.title,
@@ -152,7 +156,7 @@ private var otherSections: some View {
             statusInfo: $0.statusInfo,
             buttons: $0.buttons
         ) {
-            manageButtonClick(buttonTitle: $0)
+            manageButtonClick(buttonTitle: $0, homeViewModel: homeViewModel)
         }
     }
 }
