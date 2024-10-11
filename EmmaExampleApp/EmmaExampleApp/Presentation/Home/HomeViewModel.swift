@@ -92,6 +92,21 @@ final class HomeViewModel: ObservableObject {
         EMMA.trackExtraUserInfo(info: tags)
     }
     
+    func getStartView() {
+        let startViewinAppRequest = EMMAInAppRequest(type: .Startview)
+        EMMA.inAppMessage(request: startViewinAppRequest)
+    }
+    
+    func getAdBall() {
+        let adballRequest = EMMAInAppRequest(type: .Adball)
+        EMMA.inAppMessage(request: adballRequest)
+    }
+    
+    func getStrip() {
+        let stripRequest = EMMAInAppRequest(type: .Strip)
+        EMMA.inAppMessage(request: stripRequest)
+    }
+    
     // Permiso para rastrear o acceder al Identificador de anunciantes (IDFA)
     func trackWithIdfa() {
         if #available(iOS 14.0, *) {

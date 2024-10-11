@@ -66,10 +66,13 @@ private func manageButtonClick(buttonTitle: String, homeViewModel: HomeViewModel
             homeViewModel.addUserTag(tags: tags)
         case "Show adball":
             print("SHOW ADBALL")
+            homeViewModel.getAdBall()
         case "Show startview":
             print("SHOW STARTVIEW")
+            homeViewModel.getStartView()
         case "Show strip":
             print("SHOW STRIP")
+            homeViewModel.getStrip()
         case "Show native ad":
             print("SHOW NATIVE AD")
         case "Start order":
