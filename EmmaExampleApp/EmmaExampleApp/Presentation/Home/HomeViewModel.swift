@@ -17,6 +17,13 @@ final class HomeViewModel: ObservableObject {
         getUserId()
         getDeviceId()
         getUserInfo()
+        
+        // Test
+//        getStartView()
+//        DispatchQueue.main.asyncAfter(deadline: .now() + 2.0) { [weak self] in
+//            self?.getStrip()
+//            self?.getAdBall()
+//        }
     }
     
     // MARK: - Functions -
@@ -92,16 +99,22 @@ final class HomeViewModel: ObservableObject {
         EMMA.trackExtraUserInfo(info: tags)
     }
     
+    // La StartView es un formato de comunicación que te permite mostrar un contenido HTML,
+    // alojado en una URL, en un WebView a pantalla completa
     func getStartView() {
         let startViewinAppRequest = EMMAInAppRequest(type: .Startview)
         EMMA.inAppMessage(request: startViewinAppRequest)
     }
     
+    // El AdBall es una pequeña vista circular que muestra una imagen.
+    // Esta vista se puede arrastrar por toda la pantalla y eliminar de ella en cualquier momento,
+    // contiene un CTA que es una URL con contenido HTML que lanza un WebView al hacer clic en la ella
     func getAdBall() {
         let adballRequest = EMMAInAppRequest(type: .Adball)
         EMMA.inAppMessage(request: adballRequest)
     }
     
+    // El strip te permite mostrar un banner en lo alto de la pantalla del dispositivo con un texto que va pasando a modo de carrusel, variables como el tiempo de duración de la rotación o el tiempo de visualización son configurables desde el Dashboard
     func getStrip() {
         let stripRequest = EMMAInAppRequest(type: .Strip)
         EMMA.inAppMessage(request: stripRequest)

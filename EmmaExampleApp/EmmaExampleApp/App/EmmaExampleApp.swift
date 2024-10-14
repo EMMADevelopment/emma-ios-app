@@ -40,7 +40,8 @@ struct EmmaExampleApp: App {
     
     var body: some Scene {
         WindowGroup {
-            HomeView(sessionStarted: true)
+//            HomeView(sessionStarted: true)
+            NativeAdView()
         }
     }
 }
