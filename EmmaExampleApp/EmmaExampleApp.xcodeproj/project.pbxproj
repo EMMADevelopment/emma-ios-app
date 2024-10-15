@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		B42524CA2CBE7777003D48F3 /* NativeAdCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = B42524C92CBE7777003D48F3 /* NativeAdCard.swift */; };
 		B42E61152CB534F5002D389F /* EmmaButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = B42E61142CB534F5002D389F /* EmmaButton.swift */; };
 		B42E61182CB53738002D389F /* ButtonModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B42E61172CB53738002D389F /* ButtonModel.swift */; };
 		B42E611A2CB537D8002D389F /* ButtonsGrid.swift in Sources */ = {isa = PBXBuildFile; fileRef = B42E61192CB537D8002D389F /* ButtonsGrid.swift */; };
@@ -31,6 +32,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		B42524C92CBE7777003D48F3 /* NativeAdCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NativeAdCard.swift; sourceTree = "<group>"; };
 		B42E61142CB534F5002D389F /* EmmaButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmmaButton.swift; sourceTree = "<group>"; };
 		B42E61172CB53738002D389F /* ButtonModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonModel.swift; sourceTree = "<group>"; };
 		B42E61192CB537D8002D389F /* ButtonsGrid.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonsGrid.swift; sourceTree = "<group>"; };
@@ -221,6 +223,7 @@
 		B4FFCE432CBD28B0005BE6ED /* Components */ = {
 			isa = PBXGroup;
 			children = (
+				B42524C92CBE7777003D48F3 /* NativeAdCard.swift */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -313,6 +316,7 @@
 				B42E61182CB53738002D389F /* ButtonModel.swift in Sources */,
 				B4FFCE4A2CBD4667005BE6ED /* RouteView.swift in Sources */,
 				B42E61212CB54035002D389F /* MainItem.swift in Sources */,
+				B42524CA2CBE7777003D48F3 /* NativeAdCard.swift in Sources */,
 				B42E611E2CB53AEB002D389F /* Extension+Array.swift in Sources */,
 				B42E611A2CB537D8002D389F /* ButtonsGrid.swift in Sources */,
 				B47C62092CAFFE7E0005BD9C /* HomeView.swift in Sources */,
