@@ -38,10 +38,14 @@ class AppDelegate: NSObject, UIApplicationDelegate {
 struct EmmaExampleApp: App {
     @UIApplicationDelegateAdaptor(AppDelegate.self) var appDelegate
     
+    // MARK: - Properties -
+    @StateObject var routeViewModel = RouteViewModel()
+    
+    // MARK: - Main -
     var body: some Scene {
         WindowGroup {
-//            HomeView(sessionStarted: true)
-            NativeAdView()
+            RouteView()
+                .environmentObject(routeViewModel)
         }
     }
 }

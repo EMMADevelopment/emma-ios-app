@@ -25,6 +25,9 @@
 		B4DC0D0F2CB47D4500471618 /* WebView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4DC0D0E2CB47D4500471618 /* WebView.swift */; };
 		B4FFCE452CBD28D4005BE6ED /* NativeAdView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4FFCE442CBD28D4005BE6ED /* NativeAdView.swift */; };
 		B4FFCE472CBD29F3005BE6ED /* NativeAdViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4FFCE462CBD29F3005BE6ED /* NativeAdViewModel.swift */; };
+		B4FFCE4A2CBD4667005BE6ED /* RouteView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4FFCE492CBD4667005BE6ED /* RouteView.swift */; };
+		B4FFCE4C2CBD4692005BE6ED /* RoutingStatus.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4FFCE4B2CBD4692005BE6ED /* RoutingStatus.swift */; };
+		B4FFCE4E2CBD46DE005BE6ED /* RouteViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4FFCE4D2CBD46DE005BE6ED /* RouteViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -48,6 +51,9 @@
 		B4DC0D0E2CB47D4500471618 /* WebView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebView.swift; sourceTree = "<group>"; };
 		B4FFCE442CBD28D4005BE6ED /* NativeAdView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NativeAdView.swift; sourceTree = "<group>"; };
 		B4FFCE462CBD29F3005BE6ED /* NativeAdViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NativeAdViewModel.swift; sourceTree = "<group>"; };
+		B4FFCE492CBD4667005BE6ED /* RouteView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RouteView.swift; sourceTree = "<group>"; };
+		B4FFCE4B2CBD4692005BE6ED /* RoutingStatus.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoutingStatus.swift; sourceTree = "<group>"; };
+		B4FFCE4D2CBD46DE005BE6ED /* RouteViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RouteViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -76,6 +82,7 @@
 			isa = PBXGroup;
 			children = (
 				B42E61172CB53738002D389F /* ButtonModel.swift */,
+				B4FFCE4B2CBD4692005BE6ED /* RoutingStatus.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -156,6 +163,7 @@
 		B47C62062CAFFE570005BD9C /* Presentation */ = {
 			isa = PBXGroup;
 			children = (
+				B4FFCE482CBD4652005BE6ED /* Routing */,
 				B47C620A2CAFFE990005BD9C /* Home */,
 				B4FFCE422CBD2892005BE6ED /* NativeAd */,
 			);
@@ -215,6 +223,15 @@
 			children = (
 			);
 			path = Components;
+			sourceTree = "<group>";
+		};
+		B4FFCE482CBD4652005BE6ED /* Routing */ = {
+			isa = PBXGroup;
+			children = (
+				B4FFCE492CBD4667005BE6ED /* RouteView.swift */,
+				B4FFCE4D2CBD46DE005BE6ED /* RouteViewModel.swift */,
+			);
+			path = Routing;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -294,6 +311,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				B42E61182CB53738002D389F /* ButtonModel.swift in Sources */,
+				B4FFCE4A2CBD4667005BE6ED /* RouteView.swift in Sources */,
 				B42E61212CB54035002D389F /* MainItem.swift in Sources */,
 				B42E611E2CB53AEB002D389F /* Extension+Array.swift in Sources */,
 				B42E611A2CB537D8002D389F /* ButtonsGrid.swift in Sources */,
@@ -302,7 +320,9 @@
 				B4DC0D0F2CB47D4500471618 /* WebView.swift in Sources */,
 				B4DC0D0A2CB40C7A00471618 /* LearnMoreData.swift in Sources */,
 				B4BA8D702CB7D8D600648B3B /* HomeViewModel.swift in Sources */,
+				B4FFCE4C2CBD4692005BE6ED /* RoutingStatus.swift in Sources */,
 				B4DC0D0C2CB40E4900471618 /* LearnMoreItem.swift in Sources */,
+				B4FFCE4E2CBD46DE005BE6ED /* RouteViewModel.swift in Sources */,
 				B42E61232CB5450C002D389F /* MainItemData.swift in Sources */,
 				B47C61F72CAFFD760005BD9C /* EmmaExampleApp.swift in Sources */,
 				B4FFCE472CBD29F3005BE6ED /* NativeAdViewModel.swift in Sources */,

@@ -9,6 +9,7 @@ import SwiftUI
 
 struct HomeView: View {
     // MARK: - Properties -
+    @EnvironmentObject private var routeViewModel: RouteViewModel
     @StateObject private var homeViewModel: HomeViewModel = HomeViewModel()
     let sessionStarted: Bool
     
@@ -31,7 +32,7 @@ struct HomeView: View {
                         sessionSection(sessionStarted: sessionStarted)
                         
                         // THE OTHER SECTIONS
-                        otherSections(homeViewModel: homeViewModel)
+                        otherSections(homeViewModel: homeViewModel, routeViewModel: routeViewModel)
                         
                         // FOOTER
                         footer
@@ -46,7 +47,7 @@ struct HomeView: View {
     }
 }
 
-private func manageButtonClick(buttonTitle: String, homeViewModel: HomeViewModel) {
+private func manageButtonClick(buttonTitle: String, homeViewModel: HomeViewModel, routeViewModel: RouteViewModel) {
     switch buttonTitle {
         case "Start session":
             print("START SESSION")
@@ -75,6 +76,7 @@ private func manageButtonClick(buttonTitle: String, homeViewModel: HomeViewModel
             homeViewModel.getStrip()
         case "Show native ad":
             print("SHOW NATIVE AD")
+            routeViewModel.screen = .nativeAd
         case "Start order":
             print("START ORDER")
             homeViewModel.startOrder(orderId: "<ORDER_ID_SALVA_TEST>", customerId: "<CUSTOMER_ID_SALVA_TEST", totalPrice: 13.03)
@@ -161,7 +163,10 @@ private func sessionSection(sessionStarted: Bool) -> some View {
     }
 }
 
-private func otherSections(homeViewModel: HomeViewModel) -> some View {
+private func otherSections(
+    homeViewModel: HomeViewModel,
+    routeViewModel: RouteViewModel
+) -> some View {
     ForEach(mainData) {
         MainItem(
             title: $0.title,
@@ -169,7 +174,7 @@ private func otherSections(homeViewModel: HomeViewModel) -> some View {
             statusInfo: $0.statusInfo,
             buttons: $0.buttons
         ) {
-            manageButtonClick(buttonTitle: $0, homeViewModel: homeViewModel)
+            manageButtonClick(buttonTitle: $0, homeViewModel: homeViewModel, routeViewModel: routeViewModel)
         }
     }
 }
