@@ -14,6 +14,8 @@ struct RouteView: View {
     // MARK: - Main -
     var body: some View {
         switch routeViewModel.screen {
+            case .splash:
+                SplashView()
             case .home:
                 HomeView(sessionStarted: true)
             case .nativeAd:
@@ -24,4 +26,5 @@ struct RouteView: View {
 
 #Preview {
     RouteView()
+        .environmentObject(RouteViewModel())
 }

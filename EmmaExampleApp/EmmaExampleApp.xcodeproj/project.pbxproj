@@ -16,6 +16,7 @@
 		B42E61232CB5450C002D389F /* MainItemData.swift in Sources */ = {isa = PBXBuildFile; fileRef = B42E61222CB5450C002D389F /* MainItemData.swift */; };
 		B46729402CB68760003A641F /* EMMA_iOS in Frameworks */ = {isa = PBXBuildFile; productRef = B467293F2CB68760003A641F /* EMMA_iOS */; };
 		B46729442CB6994A003A641F /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B46729432CB6994A003A641F /* StoreKit.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
+		B47C58E82CBFB937001A39D5 /* SplashView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B47C58E72CBFB937001A39D5 /* SplashView.swift */; };
 		B47C61F72CAFFD760005BD9C /* EmmaExampleApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = B47C61F62CAFFD760005BD9C /* EmmaExampleApp.swift */; };
 		B47C61FB2CAFFD770005BD9C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B47C61FA2CAFFD770005BD9C /* Assets.xcassets */; };
 		B47C61FE2CAFFD770005BD9C /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B47C61FD2CAFFD770005BD9C /* Preview Assets.xcassets */; };
@@ -43,6 +44,7 @@
 		B46729412CB696D6003A641F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		B46729432CB6994A003A641F /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
 		B46729452CB6A488003A641F /* EmmaExampleApp.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = EmmaExampleApp.entitlements; sourceTree = "<group>"; };
+		B47C58E72CBFB937001A39D5 /* SplashView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashView.swift; sourceTree = "<group>"; };
 		B47C61F32CAFFD760005BD9C /* EmmaExampleApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = EmmaExampleApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B47C61F62CAFFD760005BD9C /* EmmaExampleApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmmaExampleApp.swift; sourceTree = "<group>"; };
 		B47C61FA2CAFFD770005BD9C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -107,6 +109,14 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		B47C58E62CBFB928001A39D5 /* Splash */ = {
+			isa = PBXGroup;
+			children = (
+				B47C58E72CBFB937001A39D5 /* SplashView.swift */,
+			);
+			path = Splash;
+			sourceTree = "<group>";
+		};
 		B47C61EA2CAFFD760005BD9C = {
 			isa = PBXGroup;
 			children = (
@@ -168,6 +178,7 @@
 			isa = PBXGroup;
 			children = (
 				B4FFCE482CBD4652005BE6ED /* Routing */,
+				B47C58E62CBFB928001A39D5 /* Splash */,
 				B47C620A2CAFFE990005BD9C /* Home */,
 				B4FFCE422CBD2892005BE6ED /* NativeAd */,
 			);
@@ -333,6 +344,7 @@
 				B42E61232CB5450C002D389F /* MainItemData.swift in Sources */,
 				B47C61F72CAFFD760005BD9C /* EmmaExampleApp.swift in Sources */,
 				B4FFCE472CBD29F3005BE6ED /* NativeAdViewModel.swift in Sources */,
+				B47C58E82CBFB937001A39D5 /* SplashView.swift in Sources */,
 				B490694D2CBE892200E3378B /* NativeAdCarousel.swift in Sources */,
 				B42E61152CB534F5002D389F /* EmmaButton.swift in Sources */,
 			);

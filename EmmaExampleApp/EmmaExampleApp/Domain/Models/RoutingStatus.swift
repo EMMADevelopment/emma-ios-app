@@ -9,6 +9,7 @@ import Foundation
 
 struct RoutingStatus {
     enum Screen {
+        case splash
         case home
         case nativeAd
     }

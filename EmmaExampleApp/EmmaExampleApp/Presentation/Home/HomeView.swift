@@ -195,4 +195,5 @@ private var footer: some View {
 
 #Preview {
     HomeView(sessionStarted: true)
+        .environmentObject(RouteViewModel())
 }

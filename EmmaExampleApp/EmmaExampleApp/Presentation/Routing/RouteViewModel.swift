@@ -9,5 +9,5 @@ import Foundation
 
 final class RouteViewModel: ObservableObject {
     // MARK: - Properties
-    @Published var screen: RoutingStatus.Screen = .home
+    @Published var screen: RoutingStatus.Screen = .splash
 }

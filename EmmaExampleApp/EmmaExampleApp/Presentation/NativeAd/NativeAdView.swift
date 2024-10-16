@@ -75,4 +75,5 @@ private var loadingView: some View {
 
 #Preview {
     NativeAdView()
+        .environmentObject(RouteViewModel())
 }
