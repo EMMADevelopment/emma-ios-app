@@ -17,7 +17,7 @@ struct RouteView: View {
             case .splash:
                 SplashView()
             case .home:
-                HomeView(sessionStarted: true)
+                HomeView()
             case .nativeAd:
                 NativeAdView()
         }

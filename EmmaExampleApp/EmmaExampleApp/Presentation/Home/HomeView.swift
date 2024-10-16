@@ -6,12 +6,13 @@
 //
 
 import SwiftUI
+import EMMA_iOS
 
 struct HomeView: View {
     // MARK: - Properties -
     @EnvironmentObject private var routeViewModel: RouteViewModel
     @StateObject private var homeViewModel: HomeViewModel = HomeViewModel()
-    let sessionStarted: Bool
+    let sessionStarted: Bool = EMMA.isSessionStarted()
     
     
     // MARK: - Main -
@@ -158,7 +159,7 @@ private func sessionSection(sessionStarted: Bool) -> some View {
             buttons: [
                 .init(title: "Start session", active: true)
             ],
-            onClick: {_ in print("Click on START SESSION when EMMA is not initialized") }
+            onClick: {_ in print("EMMA is not initialized") }
         )
     }
 }
@@ -194,6 +195,6 @@ private var footer: some View {
 }
 
 #Preview {
-    HomeView(sessionStarted: true)
+    HomeView()
         .environmentObject(RouteViewModel())
 }
