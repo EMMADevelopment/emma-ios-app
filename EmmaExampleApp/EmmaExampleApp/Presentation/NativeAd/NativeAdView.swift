@@ -21,31 +21,40 @@ struct NativeAdView: View {
                 } else {
                     let content = nativeAdViewModel.nativeAdReceived?.nativeAdContent as? [String:AnyObject]
                     let title = content?["Title"] as? String
+                    let subtitle = content?["Subtitle"] as? String
                     let image = content?["Main picture"] as? String
-                    let cta = content?["CTA"] as? String
                     
-                    NavigationStack {
-                        VStack {
-                            Text(title ?? "No hay título")
-                            Text(image ?? "No hay imagen")
-                            Text(cta ?? "No hay cta")
-                        }
-                        .navigationTitle("NativeAds")
-                        .navigationBarTitleDisplayMode(.inline)
-                        .toolbar {
-                            ToolbarItem(placement: .navigationBarLeading) {
-                                Button(action: {
-                                    routeViewModel.screen = .home
-                                }, label: {
-                                    HStack(spacing: 5) {
-                                        Image(systemName: "chevron.left")
-                                            .fontWeight(.medium)
-                                        Text("Back")
-                                    }
-                                })
+                    VStack {
+                        if let nativeAd = nativeAdViewModel.nativeAdReceived {
+                            NativeAdCard(
+                                title: title ?? "Title",
+                                subtitle: subtitle ?? "Subtitle",
+                                imageUrl: image ?? ""
+                            ) {
+                                nativeAdViewModel.openNativeAd(nativeAd: nativeAd)
                             }
                         }
+                        NativeAdCarousel(nativeAds: nativeAdViewModel.nativeAdsReceived) { index in
+                            nativeAdViewModel.openNativeAd(nativeAd: nativeAdViewModel.nativeAdsReceived[index])
+                        }
                     }
+                    .navigationTitle("NativeAds")
+                    .navigationBarTitleDisplayMode(.inline)
+                    .toolbar {
+                        ToolbarItem(placement: .navigationBarLeading) {
+                            Button(action: {
+                                routeViewModel.screen = .home
+                            }, label: {
+                                HStack(spacing: 5) {
+                                    Image(systemName: "chevron.left")
+                                        .fontWeight(.medium)
+                                    Text("Back")
+                                }
+                            })
+                        }
+                    }
+                    .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .top)
+                    .padding()
                 }
             }
             .onAppear(perform: {

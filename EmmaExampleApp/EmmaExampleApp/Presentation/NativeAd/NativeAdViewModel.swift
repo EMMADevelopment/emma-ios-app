@@ -12,6 +12,7 @@ final class NativeAdViewModel: NSObject, ObservableObject, EMMAInAppMessageDeleg
     // MARK: - Properties -
     @Published var isLoading = false
     @Published var nativeAdReceived: EMMANativeAd? = nil
+    @Published var nativeAdsReceived: [EMMANativeAd] = []
     
     // MARK: - Functions -
     func callForGettingNativeAds() {
@@ -24,6 +25,10 @@ final class NativeAdViewModel: NSObject, ObservableObject, EMMAInAppMessageDeleg
         DispatchQueue.global().async { [weak self] in
             self?.getNativeAd(templateId: "template2")
             print("getNativeAd called")
+        }
+        DispatchQueue.global().async { [weak self] in
+            self?.getBatchNativeAd(templateId: "batch-template1")
+            print("getNativeAdBatch called")
         }
     }
     
@@ -56,6 +61,9 @@ final class NativeAdViewModel: NSObject, ObservableObject, EMMAInAppMessageDeleg
         nativeAds.forEach { nativeAd in
             if let tag = nativeAd.tag {
                 print("Received batch NativeAd with tag: \(tag)")
+            }
+            DispatchQueue.main.async { [weak self] in
+                self?.nativeAdsReceived.append(nativeAd)
             }
         }
     }
