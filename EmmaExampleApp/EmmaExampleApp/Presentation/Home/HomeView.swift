@@ -27,7 +27,7 @@ struct HomeView: View {
                         header
                         
                         // DEEPLINK
-                        deeplinkSection
+                        deeplinkSection(deeplink: routeViewModel.deeplink)
                         
                         // SESSION
                         sessionSection(sessionStarted: sessionStarted)
@@ -129,15 +129,26 @@ private var header: some View {
     }
 }
 
-private var deeplinkSection: some View {
-    MainItem(
-        title: "Deeplink",
-        description: "Received deeplink will be displayed here",
-        statusInfo: "No deeplink",
-        buttons: nil,
-        onClick: {_ in }
-    )
-    .padding(.top, 16)
+private func deeplinkSection(deeplink: String?) -> some View {
+    if let deeplink {
+        MainItem(
+            title: "Deeplink",
+            description: deeplink,
+            statusInfo: "Deeplink displayed",
+            buttons: nil,
+            onClick: {_ in }
+        )
+        .padding(.top, 16)
+    } else {
+        MainItem(
+            title: "Deeplink",
+            description: "Received deeplink will be displayed here",
+            statusInfo: "No deeplink",
+            buttons: nil,
+            onClick: {_ in }
+        )
+        .padding(.top, 16)
+    }
 }
 
 private func sessionSection(sessionStarted: Bool) -> some View {

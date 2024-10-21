@@ -10,4 +10,5 @@ import Foundation
 final class RouteViewModel: ObservableObject {
     // MARK: - Properties
     @Published var screen: RoutingStatus.Screen = .splash
+    @Published var deeplink: String? = nil
 }

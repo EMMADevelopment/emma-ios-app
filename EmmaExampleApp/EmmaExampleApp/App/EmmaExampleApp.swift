@@ -8,8 +8,9 @@
 import SwiftUI
 import EMMA_iOS
 
-class AppDelegate: NSObject, UIApplicationDelegate {
+class AppDelegate: NSObject, UIApplicationDelegate, UNUserNotificationCenterDelegate {
     var window: UIWindow?
+    var routeViewModel = RouteViewModel()
     
     func application(
         _ application: UIApplication,
@@ -20,10 +21,44 @@ class AppDelegate: NSObject, UIApplicationDelegate {
         
         let configuration = EMMAConfiguration()
         configuration.sessionKey = ""
+        configuration.pushNotificationsDelegate = self // EMMA Push
         EMMA.startSession(with: configuration)
+        EMMA.startPushSystem() // Enable EMMA Push System
         return true
     }
     
+    // EMMA Push
+    func application(_ application: UIApplication, didRegisterForRemoteNotificationsWithDeviceToken deviceToken: Data) {
+        EMMA.registerToken(deviceToken)
+    }
+    
+    // EMMA Push
+    @available(iOS 10.0, *)
+    func userNotificationCenter(_ center: UNUserNotificationCenter, willPresent notification: UNNotification, withCompletionHandler completionHandler: @escaping (UNNotificationPresentationOptions) -> Void) {
+        if #available(iOS 14.0, *) {
+            completionHandler([.badge, .sound, .banner, .list])
+        } else {
+            completionHandler([.badge, .sound, .alert])
+        }
+    }
+    
+    // EMMA Push
+    @available(iOS 10.0, *)
+    func userNotificationCenter(_ center: UNUserNotificationCenter, didReceive response: UNNotificationResponse, withCompletionHandler completionHandler: @escaping () -> Void) {
+        let userInfo = response.notification.request.content.userInfo
+        
+        // Extraemos el deeplink del payload de la notificación
+        if let deeplink = userInfo["deeplink"] as? String {
+            print("Deeplink recibido: \(deeplink)")
+            
+            routeViewModel.deeplink = deeplink
+        }
+        
+        EMMA.handlePush(userInfo: userInfo)
+        completionHandler()
+    }
+    
+    // EMMA Powlink
     func application(_ application: UIApplication, continue userActivity: NSUserActivity, restorationHandler: @escaping ([any UIUserActivityRestoring]?) -> Void) -> Bool {
         if userActivity.activityType == NSUserActivityTypeBrowsingWeb {
             if let url = userActivity.webpageURL {
@@ -39,7 +74,11 @@ struct EmmaExampleApp: App {
     @UIApplicationDelegateAdaptor(AppDelegate.self) var appDelegate
     
     // MARK: - Properties -
-    @StateObject var routeViewModel = RouteViewModel()
+    var routeViewModel = RouteViewModel()
+    
+    init() {
+        appDelegate.routeViewModel = routeViewModel
+    }
     
     // MARK: - Main -
     var body: some Scene {
