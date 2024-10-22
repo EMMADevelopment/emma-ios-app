@@ -49,8 +49,6 @@ class AppDelegate: NSObject, UIApplicationDelegate, UNUserNotificationCenterDele
         
         // Extraemos el deeplink del payload de la notificación
         if let deeplink = userInfo["deeplink"] as? String {
-            print("Deeplink recibido: \(deeplink)")
-            
             routeViewModel.deeplink = deeplink
         }
         
