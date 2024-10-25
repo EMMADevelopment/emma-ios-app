@@ -20,6 +20,7 @@ class AppDelegate: NSObject, UIApplicationDelegate, UNUserNotificationCenterDele
         self.window = UIWindow(frame: UIScreen.main.bounds)
         
         let configuration = EMMAConfiguration()
+        configuration.debugEnabled = true
         configuration.sessionKey = ""
         configuration.pushNotificationsDelegate = self // EMMA Push
         EMMA.startSession(with: configuration)

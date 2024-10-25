@@ -489,6 +489,7 @@
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = EmmaExampleApp/Info.plist;
+				INFOPLIST_KEY_NSUserTrackingUsageDescription = "Esta app utiliza esta información para mostrar anuncios personalizados y mejorar tu experiencia en la app. No compartiremos tus datos sin tu consentimiento.";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -524,6 +525,7 @@
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = EmmaExampleApp/Info.plist;
+				INFOPLIST_KEY_NSUserTrackingUsageDescription = "Esta app utiliza esta información para mostrar anuncios personalizados y mejorar tu experiencia en la app. No compartiremos tus datos sin tu consentimiento.";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
